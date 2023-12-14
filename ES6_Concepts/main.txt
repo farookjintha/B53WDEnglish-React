@@ -1,0 +1,74 @@
+ES5 vs ES6(ES2015)
+Scoping - var vs let vs const
+arrow functions
+
+const myFunc = () => {}
+myFunc();
+
+arr.map(() => {})
+arr.map(function (){})
+arr.filter(() => {})
+arr.reduce(() => {})
+
+
+use of this keyword(lexical scoping)
+
+
+template literals
+`
+Hi ${userName}, 
+
+    Thank you for applying to the role of ${roleName}. Our team is looking into your application. We will get back to you soon.
+`
+
+
+
+spred & rest prarameter
+
+let newFruits = ['watermelon', 'jackfruit', 'lemon'];
+
+let fruits = ['apple', 'orange', 'mango', 'pineapple'];
+
+const [fruit1, ...restOfTheFruits] = fruits;
+
+const combined = [...fruits, ...newFruits];
+
+
+
+array & object destructure
+
+let userDetails = {
+    name: 'Priya',
+    email: 'priya@gmail.com',
+    mobileNumber: '+91 1234567890'
+}
+
+const {name, email, mobileNumber} = userDetails;
+
+const {name, ...restOfUserDetails} = userDetails;
+
+
+
+
+property shorthand
+
+let username = 'antony123';
+
+let email = 'antony@gmail.com';
+
+let userInfo = {
+    username, // username: username
+    email // email: email
+}
+
+
+module import & export
+
+
+
+
+
+Class in Javascript
+
+
+
