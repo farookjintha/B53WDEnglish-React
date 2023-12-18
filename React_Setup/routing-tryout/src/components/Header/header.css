@@ -1,0 +1,11 @@
+.comp-link {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}

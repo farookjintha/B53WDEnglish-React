@@ -8,6 +8,15 @@ const FuncCompA = () => {
   const [name, setName] = useState("");
   //   const [userDetails, setUserDetails] = useState({});
   //   const [products, setProducts] = useState([]);
+  let email = "john@gmail.com";
+
+  const printEmail = () => {
+    console.log("Printing Email (Function): ", email);
+  };
+
+  const handleIncrementFromChild = (value) => {
+    setCount(value);
+  };
 
   const handleClick = () => {
     setCount(count + 1);
@@ -38,16 +47,23 @@ const FuncCompA = () => {
   return (
     <div>
       <h1>FuncCompA</h1>
-      <button onClick={handleClick}>Increment</button>
-      <button onClick={handleCounter}>Increment Counter</button>
-
-      <input onChange={(e) => handleInput(e.target.value)} />
-
-      {count < 15 && <FuncCompB />}
+      {/* <button onClick={handleClick}>Increment</button> */}
+      {/* <button onClick={handleCounter}>Increment Counter</button> */}
 
       <h2>Name: {name}</h2>
       <h2>Count: {count}</h2>
       <h2>Counter: {counter}</h2>
+
+      <input onChange={(e) => handleInput(e.target.value)} />
+
+      {count < 15 && (
+        <FuncCompB
+          email={email}
+          count={count}
+          handleIncrementFromChild={handleIncrementFromChild}
+          printEmail={printEmail}
+        />
+      )}
     </div>
   );
 };
