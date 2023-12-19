@@ -29,11 +29,6 @@ const Header = () => {
               </Link>
             </span>
             <span className="nav-link">
-              <Link className="comp-link" to={"/profile"}>
-                Profile
-              </Link>
-            </span>
-            <span className="nav-link">
               <Link className="comp-link" to={"/messages"}>
                 Messages
               </Link>

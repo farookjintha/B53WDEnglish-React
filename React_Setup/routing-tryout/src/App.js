@@ -6,12 +6,35 @@ import Messages from "./components/Messages/messages";
 
 // import { myFunc2, myFunc3 } from "./utils/someFunction";
 // import myFunc1 from "./utils/someFunction";
+import { useState, useEffect } from "react";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/header";
 
+let listOfProfiles = [
+  {
+    id: "ABC123",
+    name: "John",
+    email: "john@gmail.com",
+  },
+  {
+    id: "XYZ1234",
+    name: "Arjun",
+    email: "arjun@gmail.com",
+  },
+  {
+    id: "EFG12345",
+    name: "Priya",
+    email: "priya@gmail.com",
+  },
+];
+
 function App() {
-  let greetings = "Welcome, John!";
+  const [profiles, setProfiles] = useState(listOfProfiles);
+
+  // useEffect(() => {
+  //   setProfiles(listOfProfiles);
+  // }, []);
 
   // myFunc1();
 
@@ -19,16 +42,19 @@ function App() {
 
   // myFunc3();
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home greetings={greetings} />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/messages" element={<Messages />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    // <BrowserRouter>
+    <div className="App">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home profiles={profiles} />} />
+        <Route
+          path="/profiles/:profileId"
+          element={<Profile profiles={profiles} />}
+        />
+        <Route path="/messages" element={<Messages />} />
+      </Routes>
+    </div>
+    // </BrowserRouter>
   );
 }
 
