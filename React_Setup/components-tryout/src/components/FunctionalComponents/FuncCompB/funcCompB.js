@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import FuncCompA from "../FuncCompA/funcCompA";
 import FuncCompC from "../FuncCompC/funcCompC";
 
 const FuncCompB = (props) => {
