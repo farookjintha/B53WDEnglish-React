@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AppContext } from "../../App";
+import { AppContext } from "../../context";
 import "./compD.css";
 
 const CompD = () => {

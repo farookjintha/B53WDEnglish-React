@@ -2,9 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import CompA from "./components/CompA";
 
-import { createContext, useEffect, useState } from "react";
-
-export const AppContext = createContext(null); // creating the context
+import {  useEffect, useState } from "react";
+import { AppContext } from "./context";
 
 let listOfProfiles = [
   {

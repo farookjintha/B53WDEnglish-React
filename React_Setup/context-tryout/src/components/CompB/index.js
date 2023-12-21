@@ -1,5 +1,5 @@
 import CompC from "../CompC";
-import { AppContext } from "../../App";
+import { AppContext } from "../../context";
 import { useContext } from "react";
 
 const CompB = () => {
