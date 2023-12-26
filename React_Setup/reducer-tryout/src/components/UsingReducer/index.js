@@ -2,18 +2,18 @@
  import { reducer, initialValue } from './utils';
  
  const CompB = () => {
-    const [value, dispatch] = useReducer(reducer, initialValue);
+    const [state, dispatch] = useReducer(reducer, initialValue);
 
     useEffect(() => {
-        console.log('Count Value: ', value);
-    }, [value])
+        console.log('Count Value: ', state);
+    }, [state])
 
 
     return (
         <div>
             <h1>Using Reducer (useReducer Hook)</h1>
             <div>
-                <h3>Count: {value}</h3>
+                <h3>Count: {state}</h3>
                 <div>
                 <button onClick={() => dispatch({type: 'INCREMENT'})} >Increment</button>
                 <button  onClick={() => dispatch({type: 'DECREMENT'})}>Decrement</button>
