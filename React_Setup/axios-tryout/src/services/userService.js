@@ -1,12 +1,14 @@
 import axios from 'axios';
 
+const BASE_URL = 'http://localhost:8001/v1';
+
 // GET
 
 export const getAllUsers = async () => {
     //logic to get all users
     // axios.get();
     try{
-        const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+        const response = await axios.get(`${BASE_URL}/users`);
         return response.data
     }catch(error){
         console.log('Error: ', error)
@@ -19,7 +21,7 @@ export const getAllUsers = async () => {
 export const addUser = async (data) => {
 // logic to add new user
     try{
-        const response = await axios.post('https://jsonplaceholder.typicode.com/users', data);
+        const response = await axios.post(`${BASE_URL}/users`, data);
         
         return response;
     }catch(error){
@@ -34,7 +36,7 @@ export const addUser = async (data) => {
 export const updateUser = async (userId, data) => {
     // logic to update user
     try{
-        const response = await axios.put(`https://jsonplaceholder.typicode.com/users/${userId}`, data);
+        const response = await axios.put(`${BASE_URL}/users/${userId}`, data);
         return response;
     }catch(error){
         console.log('Error: ', error)
@@ -48,7 +50,7 @@ export const updateUser = async (userId, data) => {
 
 export const deleteUser = async (userId) => {
     try{
-        const response = await axios.delete(`https://jsonplaceholder.typicode.com/users/${userId}`);
+        const response = await axios.delete(`${BASE_URL}/users/${userId}`);
         return response;
     }catch(error){
         console.log('Error: ', error)
