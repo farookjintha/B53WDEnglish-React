@@ -20,9 +20,13 @@ const counterSlice = createSlice({
         decrement_product: (state, payload) => {
             console.log('DECREMENTING....')
             state.count  = state.count - 1;
+
         },
         add_product_to_cart: (state, payload) => {
             console.log('RESET....')
+            state.products = [...state.products, payload.product];
+            state.totalQuantity  = state.products.reduce(); // array function
+            state.totalPrice = state.products.reduce(); // array function
             state.count = 0;
         },
         remove_product_from_cart: (state, payload) => {
