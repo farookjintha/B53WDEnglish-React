@@ -1,5 +1,6 @@
 import {useSelector, useDispatch} from 'react-redux';
 import { increment, decrement, reset } from '../../store/slices/counterSlice';
+import { increment_product } from '../../store/slices/cartSlice';
 
 
 const CompC = () => {
@@ -17,6 +18,10 @@ const CompC = () => {
             <button onClick={() => dispatch(increment())}>INCREMENT</button>
             <button onClick={() => dispatch(decrement())}>DECREMENT</button>
             <button onClick={() => dispatch(reset())}>RESET</button>
+
+
+            {/* Cart Operation */}
+            {/* <button onClick={() => dispatch(increment_product({productId: 123}))}>INCREMENT</button> */}
         </div>
     )
 }
